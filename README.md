@@ -114,7 +114,7 @@ python3 survival_analysis.py
 
 ## 📚 Skills Developed
 
-- Understanding censoring — what it is, why it cannot be ignored, and how survival analysis handles it
+- Understanding censoring -> what it is, why it cannot be ignored, and how survival analysis handles it
 - Fitting and plotting Kaplan-Meier survival curves with confidence intervals
 - Interpreting median survival time and survival probability at fixed time points
 - Log-rank test -> null hypothesis, p-value interpretation, and clinical significance vs statistical significance
