@@ -1,6 +1,6 @@
-# ⏱️ Survival Analysis — Breast Cancer Recurrence Modelling
+# ⏱️ Survival Analysis -> Breast Cancer Recurrence Modelling
 
-Standard classification asks whether an event will happen. Survival analysis asks when — and crucially, it handles the fundamental challenge of patients who haven't experienced the event yet. This project builds a complete survival analysis pipeline on a real breast cancer dataset, from Kaplan-Meier curves through to a multi-variable Cox regression model with clinical interpretation.
+Standard classification asks whether an event will happen. Survival analysis asks when, and crucially, it handles the fundamental challenge of patients who haven't experienced the event yet. This project builds a complete survival analysis pipeline on a real breast cancer dataset, from Kaplan-Meier curves through to a multi-variable Cox regression model with clinical interpretation.
 
 ---
 
@@ -19,7 +19,7 @@ Standard classification asks whether an event will happen. Survival analysis ask
 
 ## 🗂️ The Dataset
 
-The German Breast Cancer Study Group (GBSG) dataset follows 686 breast cancer patients over time, recording whether and when their cancer recurred after initial treatment. The central challenge is that 387 patients (56.4%) did not experience recurrence during the study period — they are censored. You cannot delete them (that would bias results toward faster-recurring cases) and you cannot treat them as non-events. Survival analysis handles this mathematically using the partial information each censored patient provides.
+The German Breast Cancer Study Group (GBSG) dataset follows 686 breast cancer patients over time, recording whether and when their cancer recurred after initial treatment. The central challenge is that 387 patients (56.4%) did not experience recurrence during the study period, they are censored. You cannot delete them (that would bias results toward faster-recurring cases) and you cannot treat them as non-events. Survival analysis handles this mathematically using the partial information each censored patient provides.
 
 **Features:** age · menopausal status · tumour size · tumour grade · positive lymph nodes · progesterone receptor · estrogen receptor · hormonal treatment
 
@@ -28,7 +28,7 @@ The German Breast Cancer Study Group (GBSG) dataset follows 686 breast cancer pa
 ## 📐 Methods
 
 ### Kaplan-Meier Estimator
-Non-parametric estimation of the survival function S(t) — the probability of remaining recurrence-free beyond time t. Updates at each event time using only patients still under observation, handling censored patients automatically. Produces the characteristic step-function survival curve.
+Non-parametric estimation of the survival function S(t), the probability of remaining recurrence-free beyond time t. Updates at each event time using only patients still under observation, handling censored patients automatically. Produces the characteristic step-function survival curve.
 
 **Results:**
 - Median recurrence-free survival: **4.95 years**
@@ -46,7 +46,7 @@ Statistical test comparing survival curves between groups. Produces a p-value in
 | 1–3 nodes vs 7+ nodes | < 0.000001 | ✓ Yes — strongest effect |
 
 ### Cox Proportional Hazards Model
-Multivariable regression modelling the simultaneous effect of all features on recurrence risk. Output is a Hazard Ratio (HR) for each feature — the multiplicative change in instantaneous recurrence risk per unit increase.
+Multivariable regression modelling the simultaneous effect of all features on recurrence risk. Output is a Hazard Ratio (HR) for each feature, the multiplicative change in instantaneous recurrence risk per unit increase.
 
 | Feature | HR | Direction | Significant? |
 |---------|-----|-----------|-------------|
@@ -55,7 +55,7 @@ Multivariable regression modelling the simultaneous effect of all features on re
 | Progesterone receptor | 0.767 | Protective | ✓ p < 0.001 |
 | Hormonal treatment | 0.762 | Protective | ✓ p < 0.05 |
 
-**C-index: 0.688** — the model correctly ranks 68.8% of patient pairs by recurrence risk.
+**C-index: 0.688** -> the model correctly ranks 68.8% of patient pairs by recurrence risk.
 
 ---
 
@@ -75,7 +75,7 @@ Multivariable regression modelling the simultaneous effect of all features on re
 
 ## 🔍 Key Findings
 
-Lymph node involvement is the strongest prognostic factor — patients with 7+ positive nodes have dramatically worse survival than those with 1–3 nodes, and this difference is statistically extremely significant. Grade 3 tumours recur far earlier than grade 1, with curves separating sharply within the first two years. Hormonal treatment shows a meaningful and statistically significant protective effect — patients on treatment have consistently higher survival probability at every time point.
+Lymph node involvement is the strongest prognostic factor — patients with 7+ positive nodes have dramatically worse survival than those with 1–3 nodes, and this difference is statistically extremely significant. Grade 3 tumours recur far earlier than grade 1, with curves separating sharply within the first two years. Hormonal treatment shows a meaningful and statistically significant protective effect, patients on treatment have consistently higher survival probability at every time point.
 
 The C-index of 0.688, while below 0.70, is clinically reasonable for a dataset of this size. Progesterone receptor status being protective is biologically meaningful — hormone receptor-positive tumours are generally more responsive to targeted therapies.
 
@@ -117,8 +117,8 @@ python3 survival_analysis.py
 - Understanding censoring — what it is, why it cannot be ignored, and how survival analysis handles it
 - Fitting and plotting Kaplan-Meier survival curves with confidence intervals
 - Interpreting median survival time and survival probability at fixed time points
-- Log-rank test — null hypothesis, p-value interpretation, and clinical significance vs statistical significance
-- Cox Proportional Hazards — hazard ratios, confidence intervals, and the proportional hazards assumption
+- Log-rank test -> null hypothesis, p-value interpretation, and clinical significance vs statistical significance
+- Cox Proportional Hazards -> hazard ratios, confidence intervals, and the proportional hazards assumption
 - Reading and building forest plots for hazard ratio visualisation
 - C-index as the survival equivalent of AUC-ROC
 
@@ -126,7 +126,7 @@ python3 survival_analysis.py
 
 ## 🗺️ Learning Roadmap
 
-**Project 4 of 10** — a structured series building from data exploration through to advanced ML techniques.
+_**Project 4 of 10**_ -> a structured series building from data exploration through to advanced ML techniques.
 
 | # | Project | Focus |
 |---|---------|-------|
