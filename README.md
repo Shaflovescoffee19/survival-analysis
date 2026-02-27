@@ -77,7 +77,7 @@ Multivariable regression modelling the simultaneous effect of all features on re
 
 Lymph node involvement is the strongest prognostic factor -> patients with 7+ positive nodes have dramatically worse survival than those with 1–3 nodes, and this difference is statistically extremely significant. Grade 3 tumours recur far earlier than grade 1, with curves separating sharply within the first two years. Hormonal treatment shows a meaningful and statistically significant protective effect, patients on treatment have consistently higher survival probability at every time point.
 
-The C-index of 0.688, while below 0.70, is clinically reasonable for a dataset of this size. Progesterone receptor status being protective is biologically meaningful — hormone receptor-positive tumours are generally more responsive to targeted therapies.
+The C-index of 0.688, while below 0.70, is clinically reasonable for a dataset of this size. Progesterone receptor status being protective is biologically meaningful, hormone receptor-positive tumours are generally more responsive to targeted therapies.
 
 ---
 
