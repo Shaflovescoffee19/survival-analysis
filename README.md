@@ -41,9 +41,9 @@ Statistical test comparing survival curves between groups. Produces a p-value in
 
 | Comparison | p-value | Significant? |
 |------------|---------|-------------|
-| Grade 1 vs Grade 3 | 0.000009 | ✓ Yes — extremely strong |
+| Grade 1 vs Grade 3 | 0.000009 | ✓ Yes -> extremely strong |
 | With vs Without Hormonal Treatment | 0.003427 | ✓ Yes |
-| 1–3 nodes vs 7+ nodes | < 0.000001 | ✓ Yes — strongest effect |
+| 1–3 nodes vs 7+ nodes | < 0.000001 | ✓ Yes -> strongest effect |
 
 ### Cox Proportional Hazards Model
 Multivariable regression modelling the simultaneous effect of all features on recurrence risk. Output is a Hazard Ratio (HR) for each feature, the multiplicative change in instantaneous recurrence risk per unit increase.
